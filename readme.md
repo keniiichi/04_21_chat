@@ -1,6 +1,6 @@
 ## 課題04_chat
 
-デプロイ先：url
+デプロイ先：
 https://keniiichi.github.io/04_21_chat/chatapp.html
 
 ## プロダクトの紹介
