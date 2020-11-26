@@ -1,0 +1,198 @@
+#output li{   
+  overflow: auto;
+  height:100%;
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  background-color: #eee;
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2) inset;/*ヘッダーの下に影を入れる*/
+ }
+
+
+
+body{
+font-size: 14px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+padding: 20PX;
+
+}
+
+header{ 
+    /* background-color:#00552e; */
+    /* border-bottom: 1px solid #ccc; */
+    text-align: left;
+  
+}
+
+.h2chat{
+  padding-top: 40px;
+  padding-bottom: 20px;
+  margin-bottom: 0px;
+  background-color:whitesmoke;
+  color: #2e99a9;
+  font-weight: normal;
+}
+
+li{
+  line-height: 2
+  ;
+}
+
+input[type="text"]{
+  padding: 6px,8px;
+  font-size: 14px;
+  width: 300px;
+}
+
+textarea[type="text"]{
+  padding: 6px,8px;
+  font-size: 14px;
+  width: 300px;
+}
+
+
+.message{
+  width: calc(100% - 180px);/*常に送信ボタンの横幅を引いたサイズに動的に計算*/
+  line-height: 16px;
+  height: 48px;
+  padding: 14px 6px 0px 6px;/*文字がテキストエリアの中心になる様に隙間調整*/
+  border: 1px solid #ccc;
+  border-radius: 4px;/*角丸*/
+  text-align: left;/*文字を左寄せ*/
+  box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.2) inset;/*内側に影を入れてテキストエリアらしくした*/
+  box-sizing: border-box;/*paddingとborderの要素の高さと幅の影響をなくす（要素に高さと幅を含める）*/
+  resize:none ;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.btn-outline-info{
+  width: 120px;
+  height: 48px;
+  font-size: 16px;
+  /* line-height: 3em; */
+  float: right;
+  color: #fff;
+  font-weight: bold;
+  background: #bcbcbc;
+  text-align: center;
+  border: 1px solid #bbb;
+  border-radius: 4px;/*角丸*/
+  box-sizing: border-box;/*paddingとborderの要素の高さと幅の影響をなくす（要素に高さと幅を含める）*/
+  margin-top: 40px;
+}
+.btn-outline-info:hover{
+  background:red; 
+        cursor: pointer;/*マウスポインタを当てた時に、カーソルが指の形になる*/
+}
+
+
+.btnl{
+  float: right;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ハンバーガーメニュー */
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,.16);
+}
+.global-nav {
+  position: fixed;
+  right: -320px; /* ここで隠す */
+  top: 0;
+  width: 300px; /* スマホに収まるくらいで設定 */
+  height: 100vh;
+  padding-top: 40px;
+  background-color: #fff;
+  transition: all .6s;
+  z-index: 200;
+  overflow-y: auto; /* メニューが多くなったらスクロールできる準備 */
+}
+.hamburger {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px; /* クリックしやすいように幅を指定 */
+  height: 40px; /* クリックしやすいように高さを指定 */
+  cursor: pointer;
+  z-index: 300;
+}
+.global-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.global-nav__item {
+  text-align: center;
+  padding: 0 14px;
+}
+.global-nav__item a {
+  display: block;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  text-decoration: none;
+  color: #111;
+}
+.global-nav__item a:hover {
+  background-color: #eee;
+}
+.hamburger__line {
+  position: absolute;
+  left: 11px;
+  width: 18px;
+  height: 1px;
+  background-color: #111;
+  transition: all .6s;
+}
+.hamburger__line--1 {
+  top: 14px;
+}
+.hamburger__line--2 {
+  top: 20px;
+}
+.hamburger__line--3 {
+  top: 26px;
+}
+.black-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background-color: #000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .6s;
+  cursor: pointer;
+}
+/* 表示された時用のCSS */
+.nav-open .global-nav {
+  right: 0;
+}
+.nav-open .black-bg {
+  opacity: .8;
+  visibility: visible;
+}
+.nav-open .hamburger__line--1 {
+  transform: rotate(45deg);
+  top: 20px;
+}
+.nav-open .hamburger__line--2 {
+  width: 0;
+  left: 50%;
+}
+.nav-open .hamburger__line--3 {
+  transform: rotate(-45deg);
+  top: 20px;
+}
+
+
+
